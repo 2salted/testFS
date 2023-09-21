@@ -11,13 +11,16 @@
     transition: background-color 0.3s ease;
 }
 body {
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    text-rendering: auto;
+    overflow-x: hidden;
+    font-family: 'Fira Sans Extra Condensed', verdana, sans-serif;
 }
-
+.header-container {
+    height: 100svh;
+}
 .x-container {
     display: none;
 }
-
     #heroImage {
     background-image: url(mainimage.JPG);
     height: 100svh;
@@ -126,7 +129,7 @@ body {
     }
     #bigtxt {
         text-transform: uppercase;
-        font-family: "Fira Sans Extra Condensed";
+        font-family: "Fira Sans Extra Condensed", sans-serif;
         letter-spacing: 3px;
         color: #0d3b54;
         font-size: 15vw;
@@ -212,7 +215,120 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+    .about-container {
+        padding-top: 160px;
+        padding-bottom: 160px;
+        background-image: url(about-section.jpg);
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+    .about-row-container {
+        max-width: 1320px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .about-row {
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+    }
+    .about-row > div {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .imgcontainer {
+        position: relative;
+        max-height: 450px;
+        max-width: 600px;
+    }
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        height: 80px;
+        width: auto;
+    }
+    .imgvid {
+        max-height: 450px;
+        width: auto;
+        filter: brightness(70%);
+    }
+    .about-title::before {
+        content: "";
+        background-color: #4c778d;
+        display: inline-block;
+        height: 1px;
+        width: 40px;
+        transform: translateY(-0.3em);
+        -webkit-transform: translateY(-0.3em);
+        margin-right: 20px;
+    }
+    .about-title::after {
+        clear: both;
+        content: "";
+    }
+    .about-title {
+        font-size: 18px;
+        color: #0d3b54;
+    }
+    .wwo {
+        font-family: "Fira Sans Extra Condensed", sans-serif;
+        line-height: 1;
+        font-size: 50px;
+        letter-spacing: 1.5px;
+        margin-bottom: 0.2em;
+        margin-top: 0.1em;
+        color:#10415b;
+    }
+    .wwop {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        color: #10415b;
+        font-size: 20px;
+    }
+    .txt-div {
+        font-family: "roboto", sans-serif;
+        font-weight: 500;
+        color: #4c778d;
+        font-size: 16px;
+        margin-top: 45px;
+        padding-left: 55px;
+        line-height: 1.5;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-left: 2px solid #fdd123;
+    }
+    .txt-div-p {
+        margin-bottom: 15px;
+    }
+    .about-container-1 {
+        padding: 0 20px 0 5px;
+    }
+    @media (max-width: 1250px) {
+        .imgvid {
+            max-height: 300px;
+            max-width: 400px;
+        }
+        .imgcontainer {
+            max-height: 300px;
+            max-width: 400px;
+        }
+    }
+
     @media (max-width: 1020px) {
+        .about-container-2 {
+            display: flex;
+            justify-content: center;
+        }
         #bigtxt {
          padding: 20px;
         }
@@ -287,16 +403,36 @@ body {
      .mobile-menu a:hover {
          color: #fdd123;
      }
-         }
+     .about-row {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .about-row > div {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
 
 
     @media (max-width: 550px) {
+        .play-button {
+            height: 60px;
+            width: auto;
+        }
+        .about-container {
+            background-position: 30% 50%;
+        }
+        .imgvid {
+            height: 250px;
+            width: auto;
+        }
         .hero-text-container {
             text-align: center;
         }
         #smalltxt, #bigtxt, #undertxt {
             color: #ffffff;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: 'Trebuchet MS', sans-serif;
             position: relative;
         }
 
@@ -370,6 +506,10 @@ body {
     }
 
     @media (max-width: 380px) {
+        .imgvid {
+            max-height: 210px;
+            width: auto;
+        }
         #bigtxt {
             font-size: 48px;
         }

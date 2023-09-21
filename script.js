@@ -77,3 +77,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     }, 1000);
 });
+
+
+// Function to open the modal
+function openModal() {
+    var modal = document.getElementById('videoModal');
+    modal.style.display = 'block';
+  
+    // Add 'modal-open' class to the body
+    document.body.classList.add('modal-open');
+  
+    // Event listener for clicking the close button
+    document.getElementById('closeModal').addEventListener('click', function() {
+      closeModal();
+    });
+  
+    // Event listener for closing the modal when clicking outside the modal
+    window.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  }
+  
+  // Function to close the modal
+  function closeModal() {
+    var modal = document.getElementById('videoModal');
+    modal.style.display = 'none';
+  
+    // Remove 'modal-open' class from the body
+    document.body.classList.remove('modal-open');
+  }
+  
+  // Event listener for clicking on .about-container-2
+  document.querySelector('.about-container-2').addEventListener('click', openModal);
+  

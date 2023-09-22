@@ -112,3 +112,15 @@ function openModal() {
   // Event listener for clicking on .about-container-2
   document.querySelector('.about-container-2').addEventListener('click', openModal);
   
+  // JavaScript code
+function smoothScroll(targetId) {
+    const targetElement = document.getElementById(targetId);
+  
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 60, // Adjust the offset as needed
+        behavior: 'smooth',
+      });
+    }
+  }
+  

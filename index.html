@@ -23,15 +23,15 @@
             <div class="nav-container">
                 <a href="index.html"><img src="logo2.png" alt="Floresail Logo" class="logo"></a>
                 <div class="mobile-menu">
-                <ul class="nav-menu">
-                    <li><a href="#about-title">About</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Price</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="027 916 990"><span id="spanNum">+351 </span>927 916 990</a></li>
-                </ul>
+                    <ul class="nav-menu">
+                        <li><a href="javascript:void(0);" onclick="smoothScroll('about-title')">About</a></li>
+                        <li><a href="javascript:void(0);">Gallery</a></li>
+                        <li><a href="javascript:void(0);">Price</a></li>
+                        <li><a href="javascript:void(0);">Services</a></li>
+                        <li><a href="javascript:void(0);">Testimonials</a></li>
+                        <li><a href="javascript:void(0);">Contact</a></li>
+                        <li><a href="tel:+351927916990"><span id="spanNum">+351 </span>927 916 990</a></li>
+                      </ul>
             </div>
                 <div class="x-container" onclick="myFunction(this)">
                     <div class="bar1"></div>
@@ -77,10 +77,13 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <div class="photo-gallery">
+        <div></div>
+    </div>
     <div id="videoModal" class="modal">
         <span class="close" id="closeModal">&times;</span>
         <iframe src="https://www.youtube.com/embed/lO1T_RF8Njs?si=PbJOIOc--wj0RDcV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>      
+      </div> 
+      <script src="script.js"></script>     
 </body>
 </html>

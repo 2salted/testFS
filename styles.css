@@ -96,9 +96,9 @@ body {
     .nav-menu a {
         text-decoration: none;
         color: #fff;
-        letter-spacing: 1.2px;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-size: 18px;
+        font-weight: 300;
         transition: color 0.3s ease;
     }
     
@@ -283,7 +283,9 @@ body {
         content: "";
     }
     .about-title {
+        font-family: "Poppins", sans-serif;
         font-size: 18px;
+        font-weight: 300;
         color: #0d3b54;
     }
     .wwo {
@@ -378,6 +380,146 @@ body {
     background-color: #0d425e;
     padding-top: 160px;
     padding-bottom: 160px;
+  }
+  .photo-gallery-row-container {
+    max-width: 1320px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .photo-gallery-row {
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+  }
+  .photo-gallery-row > div {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .gallery-title::before {
+    content: "";
+    background-color: #fdd123;
+    display: inline-block;
+    height: 1px;
+    width: 40px;
+    transform: translateY(-0.3em);
+    -webkit-transform: translateY(-0.3em);
+    margin-right: 20px;
+    }
+    .gallery-title::after {
+    clear: both;
+    content: "";
+    }
+    .gallery-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fdd123;
+    }
+    .pgo {
+        font-family: "Fira Sans Extra Condensed", sans-serif;
+        line-height: 1;
+        font-size: 50px;
+        letter-spacing: 1.5px;
+        margin-bottom: 0.2em;
+        margin-top: 0.1em;
+        color:#ffffff;
+    }
+    .pgop {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 20px;
+    }
+    
+
+    /* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -40px;
+    color: #fdd123;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #0d3b5494;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: #0d3b54;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    display: none;
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
   }
     @media (max-width: 1250px) {
         .imgvid {
@@ -494,6 +636,14 @@ body {
     }
 
     .about-row > div {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .photo-gallery-row {
+        flex-direction: column;
+    }
+    .photo-gallery-row > div {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;

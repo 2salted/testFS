@@ -4,6 +4,17 @@ var image3 = document.getElementById("heroImage3");
 var bigtxt = document.getElementById("bigtxt");
 var currentImage = 1;
 
+
+window.addEventListener('load', function() {
+  // Find the .text-container element
+  const textContainer = document.querySelector('.text-container');
+  
+  // After 2 seconds, remove the 'hidden' class to make it visible
+  setTimeout(function() {
+      textContainer.classList.remove('hidden');
+  }, 1000); // 2000 milliseconds = 2 seconds
+});
+
 /*
 function toggleImages() {
     if (currentImage === 1) {
@@ -74,9 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector("#button").style.opacity = "1";
             document.querySelector("#button").style.transform = "translateY(0)";
         }, 1000);
-    }, 5000);
+    }, 3500);
 });
-
 
 // Function to open the modal
 function openModal() {

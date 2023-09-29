@@ -186,7 +186,9 @@ body {
         color: transparent;
         transition: opacity 1.5s ease, transform 1.5s ease;
     }
-    
+    .hidden {
+        display: none;
+    }
     #bigtxt {
         opacity: 0;
         transform: translateX(20px);

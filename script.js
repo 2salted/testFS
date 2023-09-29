@@ -5,14 +5,14 @@ var bigtxt = document.getElementById("bigtxt");
 var currentImage = 1;
 
 
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
   // Find the .text-container element
   const textContainer = document.querySelector('.text-container');
   
   // After 2 seconds, remove the 'hidden' class to make it visible
   setTimeout(function() {
       textContainer.classList.remove('hidden');
-  }, 1000); // 2000 milliseconds = 2 seconds
+  }, 1000); // 1000 milliseconds = 1 second
 });
 
 /*

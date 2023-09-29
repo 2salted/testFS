@@ -72,7 +72,6 @@ mobileMenuItems.forEach(function (item) {
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         document.querySelector(".text-container").style.color = "#0d3b54";
-        document.querySelector(".text-container").style.transform = "translate(-50%, -50%)";
         
         document.querySelectorAll("#smalltxt, #bigtxt, #undertxt").forEach(function (element, index) {
             setTimeout(function () {
@@ -120,6 +119,7 @@ function openModal() {
   
   // Event listener for clicking on .about-container-2
   document.querySelector('.about-container-2').addEventListener('click', openModal);
+  document.querySelector('.imgcontainer2').addEventListener('click', openModal);
   
   // JavaScript code
 function smoothScroll(targetId) {

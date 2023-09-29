@@ -181,36 +181,35 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-42%, -50%);
+        transform: translate(-50%, -50%);
         z-index: 2;
         color: transparent;
-        transition: opacity 1.5s ease, transform 1.5s ease;
     }
     .hidden {
         display: none;
     }
     #bigtxt {
         opacity: 0;
-        transform: translateX(20px);
-        transition: opacity 1.5s ease, transform 1.5s ease;
+        transform: translateX(100px);
+        transition: opacity 2s ease, transform 1.5s ease; /*1.5*/
     }
 
     #smalltxt {
         opacity: 0;
-        transform: translateX(20px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateX(60px);
+        transition: opacity 1.5s ease, transform 1.5s ease; /*0.3*/
     }
 
     #undertxt {
         opacity: 0;
         transform: translateX(20px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
+        transition: opacity 1s ease, transform 1.2s ease; /*0.8*/
     }
 
     #button {
         opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1.5s ease, transform 1.5s ease;
+        transform: translateY(10px);
+        transition: opacity 1.2s ease, transform 1.2s ease;
     }
 
     #button.show {
@@ -261,6 +260,10 @@ body {
         z-index: 999;
         height: 80px;
         width: auto;
+        transition: opacity 0.6s ease;
+    }
+    .play-button:hover {
+        opacity: 0.4;
     }
     .imgvid {
         cursor: pointer;
@@ -379,7 +382,7 @@ body {
     cursor: pointer;
   }
   .photo-gallery {
-    background-color: #0d425e;
+    background-color: #134b69;
     padding-top: 160px;
     padding-bottom: 160px;
   }
@@ -524,6 +527,34 @@ body {
   .demo:hover {
     opacity: 1;
   }
+  .cabin-pic-row-container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .cabin-pic-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cabin-pic-row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .image-mod-1 {
+    padding-right: 8px;
+    padding-top: 10px;
+  }
+  .image-mod-2 {
+    padding-left: 8px;
+    padding-top: 10px;
+  }
+  .cabin-pic-row img {
+    max-width: 100%; /* Ensure the images don't exceed their container */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+  
     @media (max-width: 1250px) {
         .imgvid {
             max-height: 300px;
@@ -575,7 +606,9 @@ body {
          cursor: pointer;
          z-index: 999;
      }
-               
+               .photo-gallery-container-1 {
+                text-align: center;
+               }
          .bar1, .bar2, .bar3 {
          width: 35px;
          height: 5px;

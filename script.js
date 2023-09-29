@@ -58,7 +58,6 @@ mobileMenuItems.forEach(function (item) {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         document.querySelector(".text-container").style.color = "#0d3b54";
@@ -75,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector("#button").style.opacity = "1";
             document.querySelector("#button").style.transform = "translateY(0)";
         }, 1000);
-    }, 1000);
+    }, 5000);
 });
 
 

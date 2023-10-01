@@ -445,6 +445,8 @@ body {
 
     /* Position the image container (needed to position the left and right arrows) */
 .container {
+    user-select: none;
+    -webkit-user-select: none;
     position: relative;
   }
   
@@ -465,15 +467,15 @@ body {
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
+    padding: 15px;
     margin-top: -40px;
     color: #fdd123;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
-    background-color: #0d3b5494;
+    background-color: #0d3b54d0;
   }
   
   /* Position the "next button" to the right */
@@ -543,16 +545,130 @@ body {
     max-width: 50%;
   }
   .image-mod-1 {
+    user-select: none;
+    -webkit-user-select: none;
     padding-right: 8px;
     padding-top: 10px;
   }
   .image-mod-2 {
+    user-select: none;
+    -webkit-user-select: none;
     padding-left: 8px;
     padding-top: 10px;
   }
   .cabin-pic-row img {
     max-width: 100%; /* Ensure the images don't exceed their container */
     height: auto; /* Maintain the image's aspect ratio */
+  }
+  .photo-gallery-container-1 {
+    padding-right: 15px;
+  }
+  .vidimg-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+.play-button2 {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    height: 80px;
+    width: auto;
+    transition: opacity 0.6s ease;
+}
+.play-button2:hover {
+    opacity: 0.4;
+}
+.imgvid2 {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    max-width: 100%;
+    height: auto;
+    filter: brightness(70%);
+}
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal123 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: none; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close123 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close123:hover,
+  .close123:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
   }
   
     @media (max-width: 1250px) {
@@ -684,7 +800,30 @@ body {
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .photo-gallery-container-1 {
+        padding-right: 0px;
+        padding-bottom: 10px;
+      }
+      .play-button2 {
+        height: 120px;
+        width: auto;
+      }
+      .prev,
+      .next {
+    padding: 30px;
+    font-size: 50px;
+    background-color: #0d3b54d0;
+  }
+  .numbertext {
+    font-size: 30px;
+  }
 }
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+        .modal-content {
+          width: 100%;
+        }
+      }
 
     @media (max-width: 660px) {
         .about-container-1 {
@@ -780,6 +919,19 @@ body {
                 transform: translateX(20px);
                 transition: opacity 2s ease, transform 2s ease;
             }
+            .play-button2 {
+                height: 60px;
+                width: auto;
+              }
+              .prev,
+              .next {
+                padding: 15px;
+                font-size: 30px;
+                background-color: #0d3b54d0;
+          }
+              .numbertext {
+                font-size: 15px;
+          }
     }
 
     @media (max-width: 380px) {

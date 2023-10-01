@@ -119,7 +119,6 @@ function openModal() {
   
   // Event listener for clicking on .about-container-2
   document.querySelector('.about-container-2').addEventListener('click', openModal);
-  document.querySelector('.imgcontainer2').addEventListener('click', openModal);
   
   // JavaScript code
 function smoothScroll(targetId) {
@@ -163,3 +162,29 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
+var modal123 = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var span123 = document.getElementsByClassName("close123")[0];
+
+// Open the modal when the image is clicked
+img.onclick = function () {
+  modal123.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+};
+
+// Close the modal when the close button is clicked
+span123.onclick = function () {
+  modal123.style.display = "none";
+};
+
+// Close the modal when you click anywhere outside of it
+window.onclick = function (event) {
+  if (event.target == modal123) {
+    modal123.style.display = "none";
+  }
+};

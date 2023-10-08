@@ -13,7 +13,7 @@
 body {
     text-rendering: auto;
     overflow-x: hidden;
-    font-family: 'Fira Sans Extra Condensed', verdana, sans-serif;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
 .header-container {
     height: 100svh;
@@ -133,7 +133,7 @@ body {
         letter-spacing: 3px;
         color: #0d3b54;
         font-size: 15vw;
-        font-weight: bolder;
+        font-weight: 600;
     }
     #smalltxt {
         position: relative;
@@ -297,6 +297,7 @@ body {
         font-family: "Fira Sans Extra Condensed", sans-serif;
         line-height: 1;
         font-size: 50px;
+        font-weight: 500;
         letter-spacing: 1.5px;
         margin-bottom: 0.2em;
         margin-top: 0.1em;
@@ -429,6 +430,7 @@ body {
         font-family: "Fira Sans Extra Condensed", sans-serif;
         line-height: 1;
         font-size: 50px;
+        font-weight: 500;
         letter-spacing: 1.5px;
         margin-bottom: 0.2em;
         margin-top: 0.1em;
@@ -599,7 +601,15 @@ body {
   }
   
   #myImg:hover {opacity: 0.7;}
+
+  #myImg2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
   
+  #myImg2:hover {opacity: 0.7;}
+
   /* The Modal (background) */
   .modal123 {
     display: none; /* Hidden by default */
@@ -670,7 +680,241 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
+  .pricing {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
   
+  .pricing-row-container {
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .pricing-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .pricing-col-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .pricing-column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .pricing-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .pricing-title::before {
+    content: "";
+    background-color: #4c778d;
+    display: inline-block;
+    height: 1px;
+    width: 40px;
+    transform: translateY(-0.3em);
+    -webkit-transform: translateY(-0.3em);
+    margin-right: 20px;
+  }
+  
+  .pricing-title::after {
+    clear: both;
+    content: "";
+  }
+  
+  .pricing-title {
+    margin-bottom: 4px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #0d425e;
+  }
+  
+  .ph3 {
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+    line-height: 1;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.18em;
+    color: #0d425e;
+  }
+  
+  .pwt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #0d425e;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  
+  .pricing-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .pricing-card {
+    flex: 0 0 calc(33.333333% - 30px); /* Subtract 30px for left and right margins */
+    max-width: calc(33.333333% - 30px);
+    margin: 0 15px; /* Add 15px margin on both sides of each card */
+    background-color: #bbb;
+  }
+  
+  /* Style for the first card */
+  .card1 {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-top {
+    background-image: url(pictest.jpg);
+    filter: brightness(108%);
+    position: relative;
+    background-position: right center; /* Center the background image horizontally and vertically */
+    background-size: 800px; /* Adjust the size as needed */
+  }
+  .card-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 209, 27, 0.803); /* Yellow color with 50% opacity */
+    z-index: 1;
+  }
+  .card-bottom {
+    background-color: #eef3f5;
+  }
+  .card-top-container {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Ensure proper positioning for child elements */
+  }
+  .card-bottom-container {
+    padding: 50px 40px 30px;
+  }
+  .text-overlay {
+    z-index: 2; /* Place the text above the background and overlay */
+    color: #0d425e; /* Set the text color */
+    background: none; /* Remove any background */
+  }
+  .text-overlay2 {
+    position: absolute;
+    z-index: 3; /* Place the text above the background and overlay */
+    color: #0d425e; /* Set the text color */
+    background: none; /* Remove any background */
+  }
+  .text-overlay h2 {
+    font-size: 100px; /* Adjust the font size as needed */
+    font-weight: 900;
+    margin: 0; /* Remove any default margin */
+  }
+  .dsign {
+    position: relative;
+    right: 62px;
+    top: -30px;
+    font-weight: 300;
+    font-size: 50px;
+  }
+  .dsign2 {
+    position: relative;
+    right: 85px;
+    top: -30px;
+    font-weight: 300;
+    font-size: 50px;
+  }
+  .dsign3 {
+    position: relative;
+    right: 80px;
+    top: -30px;
+    font-weight: 300;
+    font-size: 50px;
+  }
+  .text-overlay3 {
+    position: absolute;
+    z-index: 3; /* Place the text above the background and overlay */
+    color: #0d425e; /* Set the text color */
+    background: none; /* Remove any background */
+  }
+  .perperson {
+    position: relative;
+    right: 0px;
+    top: 55px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .cb-ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  .cb-li {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #4c778d;
+    padding: 10px 0;
+    border-bottom: 1px solid #4c778d2c;
+  }
+
+  .cb-last {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #4c778d;
+    padding: 10px 0;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    padding: 0px 40px 50px;
+  }
+  .cb-btn {
+  display: inline-block;
+  background-color: #ffd735; /* Yellow background color */
+  color:#0d3b54; /* Text color */
+  padding: 15px 25px; /* Padding around the text */
+  border: none; /* Remove border */
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0px;
+  }
+  .fa-solid {
+    margin-right: 5px;
+  }
+    @media (min-width: 1120px) {
+      .pricing-col-container {
+        max-width: 1400px;
+      }
+      .pricing-row {
+        justify-content: center;
+      }
+    }
+
     @media (max-width: 1250px) {
         .imgvid {
             max-height: 300px;
@@ -683,6 +927,12 @@ body {
         .imgcontainer {
             max-height: 300px;
             max-width: 400px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .pricing-row-container {
+            max-width: 1140px;
         }
     }
 

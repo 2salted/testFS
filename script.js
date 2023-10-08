@@ -169,6 +169,7 @@ var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 var span123 = document.getElementsByClassName("close123")[0];
+var img2 = document.getElementById("myImg2");
 
 // Open the modal when the image is clicked
 img.onclick = function () {
@@ -176,6 +177,12 @@ img.onclick = function () {
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
 };
+
+img2.onclick = function () {
+  modal123.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
 
 // Close the modal when the close button is clicked
 span123.onclick = function () {

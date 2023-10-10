@@ -687,15 +687,11 @@ body {
   
   .pricing-row-container {
     width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
   }
   
   .pricing-row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
   }
   
   .pricing-col-container {
@@ -763,19 +759,31 @@ body {
   
   .pricing-cards-row {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
   }
-  
-  .pricing-card {
-    flex: 0 0 calc(33.333333% - 30px); /* Subtract 30px for left and right margins */
-    max-width: calc(33.333333% - 30px);
-    margin: 0 15px; /* Add 15px margin on both sides of each card */
-    background-color: #bbb;
+
+  @media (min-width: 768px) {
+    .pricing-card {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
   }
+    }
+
+  @media (min-width: 1400px) {
+  .pricing-card {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
   
   /* Style for the first card */
-  .card1 {
+  .card1, .card2, .card3 {
+    width: 80%;
+    padding: 10px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -868,7 +876,7 @@ body {
     text-align: center;
   }
   .cb-li {
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     color: #4c778d;
@@ -877,7 +885,7 @@ body {
   }
 
   .cb-last {
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     color: #4c778d;
@@ -914,7 +922,6 @@ body {
         justify-content: center;
       }
     }
-
     @media (max-width: 1250px) {
         .imgvid {
             max-height: 300px;
@@ -1068,8 +1075,16 @@ body {
     font-size: 30px;
   }
 }
+    @media (max-width: 767px){
+      .card1, .card2, .card3 {
+        width: 100%;
+      }
+      #heroImage {
+        background-position: center center;
+      }
+    }
     /* 100% Image Width on Smaller Screens */
-    @media only screen and (max-width: 700px){
+    @media (max-width: 700px){
         .modal-content {
           width: 100%;
         }
@@ -1094,27 +1109,29 @@ body {
             width: auto;
         }
         .hero-text-container {
+            margin-top: 35px;
             text-align: center;
         }
         #smalltxt, #bigtxt, #undertxt {
             color: #ffffff;
-            font-family: 'Trebuchet MS', sans-serif;
             position: relative;
         }
 
         #smalltxt {
-            text-shadow: rgb(0, 0, 0) 0px 0px 6px;
-            font-size: 15px;
-            margin-right: 25px
+            font-size: 16px;
+            margin-left: 0px;
+            font-family: 'Poppins', sans-serif;
         }
         #undertxt {
+            font-family: 'Poppins', sans-serif;
             font-size: 16px;
             right: 0;
             text-align: center;
         }
         #bigtxt {
+            font-family: 'Fira Sans Extra Condensed', sans-serif;
             line-height: 98px;
-            font-size: 50px;
+            font-size: 60px;
             padding-right: 0px;
             padding-left: 0px;
             font-weight: bolder;
@@ -1190,9 +1207,13 @@ body {
             width: auto;
         }
         #bigtxt {
-            font-size: 48px;
+            font-size: 52px;
         }
-        #smalltxt {
-            font-size: 16px;
+        #smalltxt, #undertxt {
+            font-size: 14px;
+        }
+        .pricing-col-container {
+          padding: 0px;
         }
     }
+    

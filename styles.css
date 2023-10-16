@@ -947,6 +947,32 @@ body {
   .fa-solid {
     margin-right: 5px;
   }
+  .sticky {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 999;
+    }
+  
+  div .WhatsApp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1bd741;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    text-decoration: none;
+    }
+
+   div .WhatsApp img {
+    height: 35px;
+    width: 35px;
+    }
     @media (min-width: 1120px) {
       .pricing-col-container {
         max-width: 1400px;
@@ -1248,6 +1274,10 @@ body {
               .numbertext {
                 font-size: 15px;
           }
+          .sticky {
+            right: 20px;
+            bottom: 20px;
+            }
     }
 
     @media (max-width: 380px) {
